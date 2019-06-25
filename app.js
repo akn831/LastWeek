@@ -1,0 +1,44 @@
+$(function() {
+    $(".img").on("click", function() {
+        $('<div id="over">').appendTo($(".container")).hide().fadeIn();
+
+        //画像を表示する
+        $("#over").append($('<div class="img-box">'));
+        $(".img-box").append($('<span class="close">&times;</span>'));
+        $(".img-box").append($('<img class="lightbox">'));  
+
+        //クリックされた画像のソースの値をとる
+        let imageSrc = $(this).attr("src");
+
+        //作成した<img class= "lightbox">のsrcにクッリクされた画像のsrcを設定
+        $(".lightbox").attr("src", imageSrc);
+
+        //バツボタンがクリックされたら画像を閉じる
+        $(".close").on("click", function() {
+            $("#over").fadeOut(function() {
+                $("#over").remove();
+            })
+        })
+    })
+})
+
+new Chart(document.getElementById("myChart"), {
+    type: "doughnut",
+    data: {
+        labels: ["船代", "ポートチャージやビザ等の諸費用", "離脱費用", "お小遣い"],
+        datasets: [
+            {
+                data: [990000,100000,400000,200000],
+                backgroundColor: [
+                    "rgb(255,99,132)",
+                    "rgb(54,162,235)",
+                    "rgb(255,205,86)",
+                    "rgb(234,57,10)",
+                ]
+            }
+        ]
+    }
+})
+
+$("#myChart").css({"width":"600px", "height":"300"});
+
