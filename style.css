@@ -143,6 +143,44 @@ p{
     margin-top: 50px;
 }
 
+.money ul span{
+    color: red;
+    font-size: 20px;
+    font-weight: bold; 
+}
+
+.money ul li:nth-child(2){
+    padding-top: 15px;
+}
+
+.money ul li:nth-child(5){
+    border-bottom: 1px solid black;
+}
+
+.money ul li:last-child{
+    font-size: 20px;
+}
+
+.money p{
+    font-size: 12px;
+}
+
+.lifestyle{
+    height: 150vh;
+}
+
+.event-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.event{
+    border-radius: 50%;
+}
+
+
+
 /* お問い合せフォーム */
 .contact{
     align-items: center;
