@@ -1,5 +1,6 @@
 .header-nav{
-    background-color: rgba(240, 248, 255, .7);
+    background-color: rgba(5, 5, 5);
+    color: white;
     display: flex;
     justify-content: center;
     position: fixed;
@@ -27,6 +28,7 @@
     cursor: pointer;
     color: orange;
 }
+
 
 .top-title{
     background: url(img/IMG_8150.JPG);
@@ -121,11 +123,16 @@ p{
     font-family: 'Sacramento', cursive;
 }
 
-.img{
+.img,
+.video{
     height: 200px;
     width: 200px;
     margin: 5px;
     cursor: pointer;
+}
+
+.img:hover{
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
 }
 
 #over{
@@ -156,6 +163,7 @@ p{
     font-weight: bold;
     color: black;
     cursor: pointer; 
+    z-index: 10;
 }
 
 #myChart{

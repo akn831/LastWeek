@@ -1,4 +1,10 @@
 $(function() {
+    $(".top").on("click", function() {
+        let scrollTop = $(window).scrollTop();
+
+        $(body).animate({scrollTop: "10"}, 1000);
+    })
+
     // lightbox
     $(".img").on("click", function() {
         $('<div id="over">').appendTo($(".container")).hide().fadeIn();
@@ -7,6 +13,28 @@ $(function() {
         $("#over").append($('<div class="img-box">'));
         $(".img-box").append($('<span class="close">&times;</span>'));
         $(".img-box").append($('<img class="lightbox">'));  
+
+        //クリックされた画像のソースの値をとる
+        let imageSrc = $(this).attr("src");
+
+        //作成した<img class= "lightbox">のsrcにクッリクされた画像のsrcを設定
+        $(".lightbox").attr("src", imageSrc);
+
+        //バツボタンがクリックされたら画像を閉じる
+        $(".close").on("click", function() {
+            $("#over").fadeOut(function() {
+                $("#over").remove();
+            })
+        })
+    })
+
+    $(".video").on("click", function() {
+        $('<div id="over">').appendTo($(".container")).hide().fadeIn();
+
+        //画像を表示する
+        $("#over").append($('<div class="img-box">'));
+        $(".img-box").append($('<span class="close">&times;</span>'));
+        $(".img-box").append($('<video autoplay class="lightbox">'));  
 
         //クリックされた画像のソースの値をとる
         let imageSrc = $(this).attr("src");
@@ -40,10 +68,7 @@ $(function() {
             ]
         }
     })
-
     $("#myChart").css({"width":"600px", "height":"300"});
-
-
 
     // フェードイン
     $(window).on("scroll", function() {
@@ -56,9 +81,6 @@ $(function() {
                 $(this).addClass("scrollin");   
             }
         })
-
-
-    
     })
 
     // header nav
