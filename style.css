@@ -1,9 +1,16 @@
+header{
+    position: fixed;
+    top: 0;
+}
+
 .header{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 80px;
     margin: 0 auto;
+    position: fixed;
+    left: 425px;
 }
 
 .header li{
@@ -47,9 +54,8 @@ h2{
     max-width: 100%;
 }
 
+/* content */
 .content{
-    /* height: 100vh; */
-    /* background-color: bisque; */
     width: 100%;
     text-align: center;
 }
@@ -57,6 +63,15 @@ h2{
 section{
     height: 100vh;
     margin: 40px;
+}
+
+.fadein{
+    opacity: 0;
+    transition: all 500ms;
+}
+
+.fadein.scrollin{
+    opacity: 1;
 }
 
 .title{
