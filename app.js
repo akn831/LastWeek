@@ -43,6 +43,8 @@ $(function() {
 
     $("#myChart").css({"width":"600px", "height":"300"});
 
+
+
     // フェードイン
     $(window).on("scroll", function() {
         $(".fadein").each(function() {
@@ -58,5 +60,26 @@ $(function() {
 
     
     })
+
+    // header nav
+    let _window = $(window),
+        _header = $(".header-nav"),
+        heroBottom,
+        startPos,
+        winScrollTop;
+    
+    _window.on("scroll", function() {
+       winScrollTop = $(this).scrollTop();
+       heroBottom = $(".top-title").height();
+       if(winScrollTop >= startPos) {
+            if(winScrollTop >= heroBottom) {
+                _header.addClass("hide");
+            }     
+        } else {
+             _header.removeClass("hide");
+        }
+        startPos = winScrollTop;
+    });
+    _window.trigger("scroll");
 })
 

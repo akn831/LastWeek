@@ -1,23 +1,34 @@
-header{
+.header-nav{
+    background-color: rgba(240, 248, 255, .7);
+    display: flex;
+    justify-content: center;
     position: fixed;
     top: 0;
+    transition: .5s;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    padding-top: 12px;
+}
+
+.header-nav.hide{
+    top: -63px;
 }
 
 .header{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80px;
-    margin: 0 auto;
-    position: fixed;
-    left: 425px;
 }
 
 .header li{
     margin-right: 20px;
 }
 
-.top{
+.header li:hover{
+    cursor: pointer;
+    color: orange;
+}
+
+.top-title{
     background: url(img/IMG_8150.JPG);
     background-size: 100% 110%; 
     background-repeat: no-repeat; 
@@ -31,7 +42,7 @@ h1{
     color: white;
     transform: rotate(-20deg);
     position: absolute;
-    top: 90px;
+    top: 117px;
     left: 40px;
     font-family: 'Sacramento', cursive;
     text-shadow: 2px 1px 0 rgba(19, 223, 97, 0.3);
@@ -42,7 +53,7 @@ h2{
     color: white;
     transform: rotate(-20deg);
     position: absolute;
-    top: 155px;
+    top: 180px;
     left: 100px;
     margin: 10px;
     font-family: 'Noto Sans JP', sans-serif;
@@ -236,9 +247,10 @@ p{
 
 /* footer */
 footer{
-    background-color: white;
+    background-color: black;
     height: 50px;
     text-align: center;
     align-items: center;
     padding-top: 17px;
+    color: white;
 }
