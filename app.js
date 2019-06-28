@@ -1,9 +1,25 @@
 $(function() {
-    $(".top").on("click", function() {
-        let scrollTop = $(window).scrollTop();
+    // 任意のズレ高さピクセル数を入力
+    // let headerHight = 100;
 
-        $(body).animate({scrollTop: "10"}, 1000);
-    })
+    // // #で始まるアンカーをクリックした場合の処理
+    // $('a[href^=#]').click(function() {
+    //     // スクロールにかかる時間
+    //     let time = 500;
+    //     // アンカーの値取得
+    //     let href = $(this).attr("href");
+    //     // 移動先を取得
+    //     let target = $(href == "#" || href == "" ? 'html' : href);
+    //     // 移動先を数値で取得
+    //     let position = target.offset().top-headerHight;
+    //     // スムーズスクロール
+    //     $('body, html').animate({scrollTop:position}, speed, 'swing');
+    //     return false;
+        
+    // })
+
+   
+    
 
     // lightbox
     $(".img").on("click", function() {

@@ -24,11 +24,15 @@
     margin-right: 20px;
 }
 
-.header li:hover{
+.header li a{
+    text-decoration: none;
+    color: white;
+} 
+
+.header li a:hover{
     cursor: pointer;
     color: orange;
 }
-
 
 .top-title{
     background: url(img/IMG_8150.JPG);
